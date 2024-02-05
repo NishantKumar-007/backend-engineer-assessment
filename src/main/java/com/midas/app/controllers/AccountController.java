@@ -1,5 +1,6 @@
 package com.midas.app.controllers;
 
+import com.midas.app.enums.ProviderType;
 import com.midas.app.mappers.Mapper;
 import com.midas.app.models.Account;
 import com.midas.app.services.AccountService;
@@ -17,7 +18,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 @RequiredArgsConstructor
 public class AccountController implements AccountsApi {
+
   private final AccountService accountService;
+
   private final Logger logger = LoggerFactory.getLogger(AccountController.class);
 
   /**
@@ -37,6 +40,7 @@ public class AccountController implements AccountsApi {
                 .firstName(createAccountDto.getFirstName())
                 .lastName(createAccountDto.getLastName())
                 .email(createAccountDto.getEmail())
+                .providerType(ProviderType.STRIPE)
                 .build());
 
     return new ResponseEntity<>(Mapper.toAccountDto(account), HttpStatus.CREATED);

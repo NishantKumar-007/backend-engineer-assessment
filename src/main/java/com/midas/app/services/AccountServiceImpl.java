@@ -3,12 +3,14 @@ package com.midas.app.services;
 import com.midas.app.models.Account;
 import com.midas.app.repositories.AccountRepository;
 import com.midas.app.workflows.CreateAccountWorkflow;
+import com.stripe.Stripe;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.workflow.Workflow;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,6 +22,9 @@ public class AccountServiceImpl implements AccountService {
 
   private final AccountRepository accountRepository;
 
+  @Value("${stripe.api-key}")
+  private String key;
+
   /**
    * createAccount creates a new account in the system or provider.
    *
@@ -28,6 +33,8 @@ public class AccountServiceImpl implements AccountService {
    */
   @Override
   public Account createAccount(Account details) {
+
+    Stripe.apiKey = key;
     var options =
         WorkflowOptions.newBuilder()
             .setTaskQueue(CreateAccountWorkflow.QUEUE_NAME)
