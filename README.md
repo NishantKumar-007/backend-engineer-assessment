@@ -36,6 +36,7 @@ brew install temporal
 or visit [Temporal Installation](https://docs.temporal.io/cli#install) for more information.
 
 You can install Docker using Homebrew
+![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/ca245c54-897e-4f30-9ea4-3d2ff34f3212)
 
 ```sh
 brew install docker
