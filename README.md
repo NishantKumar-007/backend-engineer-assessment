@@ -1,13 +1,4 @@
-# Getting Started
-
-**IMPORTANT: Do not send pull requests to this repository. This is a template repository and is not used for grading. Any pull requests will be closed and ignored.**
-
-## Introduction
-
-If you are reading this, you are probably have received this project as a coding challenge. Please read the instructions
-carefully and follow the steps below to get started.
-
-## Setup
+## Backend Assessment
 
 ### Pre-requisities
 
@@ -36,7 +27,6 @@ brew install temporal
 or visit [Temporal Installation](https://docs.temporal.io/cli#install) for more information.
 
 You can install Docker using Homebrew
-![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/ca245c54-897e-4f30-9ea4-3d2ff34f3212)
 
 ```sh
 brew install docker
@@ -47,6 +37,14 @@ or visit [Docker Installation](https://docs.docker.com/get-docker/) for more inf
 ### Other platforms
 
 Please check the official documentation for the installation of Java, Temporal, and Docker for your platform.
+
+### Code
+
+Download the code from above or clone it using
+```sh
+git clone https://github.com/NishantKumar-007/backend-engineer-assessment.git
+```
+
 
 ### Stripe API Keys
 
@@ -68,24 +66,24 @@ temporal server start-dev
 and then run the application using the following command or using your IDE.
 
 ```sh
-./gradlew bootRun
+gradlew bootRun
 ```
-
-### Other commands
-
-#### Lint
-To run lint checks, use the following command
-
+Springboot application will start at [http://localhost:8080](http://localhost:8080/). To invoke the workflows we need [Postman](https://www.postman.com/downloads/) to send data to endpoints (to mimic user registered behaviour). Open postman and send POST request to -
 ```sh
-./gradlew sonarlintMain
+http://localhost:8080/accounts
 ```
-
-#### Code Formatting
-To format the code, use the following command
-
+body parameters -
 ```sh
-./gradlew spotlessApply
+{
+    "firstName":"Tom",
+    "lastName":"Cruise",
+    "email":"tom@test.com"
+}
 ```
+This will invoke the workflow and your temporal UI will start at [http://localhost:8233](http://localhost:8233/)
+
+## Implementation Approach
+
 
 ## Guides
 
@@ -105,3 +103,4 @@ In this file, the following services have been defined:
 - postgres: [`postgres:latest`](https://hub.docker.com/_/postgres)
 
 Please review the tags of the used images and set them to the same as you're running in production.
+
