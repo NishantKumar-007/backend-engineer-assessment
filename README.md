@@ -83,6 +83,7 @@ body parameters -
 This will invoke the workflow and your temporal UI will start at [http://localhost:8233](http://localhost:8233/)
 
 ## Implementation Approach
+![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/c9c121df-bd29-4f73-b41d-dca3608ab13a)
 
 
 ## Guides
