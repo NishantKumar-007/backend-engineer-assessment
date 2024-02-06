@@ -85,7 +85,7 @@ This will invoke the workflow and your temporal UI will start at [http://localho
 ### Running Test
 run following command at project root
 ```sh
-    gradlew test
+gradlew test
 ```
 
 ## Implementation Approach
