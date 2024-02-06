@@ -107,7 +107,8 @@ I have created another branch with 2 more important changes - [link](https://git
 - GET/POST endpoints return providerType and providerId along with other basic details.
 - Can not create more than one user if email already exists
 
-Note - reason for not including above features in main branch -> I didn't want to temper with original auto generated data there.
+Note - reason for not including above features in main branch -> I didn't want to temper with original auto generated files(dto , api etc.) there.
+You can run this branch with same steps as main branch if you want.
 
 ## Guides
 
