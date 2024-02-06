@@ -1,12 +1,12 @@
 package com.midas.app.controllers;
 
+import com.midas.app.api.AccountsApi;
 import com.midas.app.enums.ProviderType;
 import com.midas.app.mappers.Mapper;
 import com.midas.app.models.Account;
+import com.midas.app.models.AccountDto;
+import com.midas.app.models.CreateAccountDto;
 import com.midas.app.services.AccountService;
-import com.midas.generated.api.AccountsApi;
-import com.midas.generated.model.AccountDto;
-import com.midas.generated.model.CreateAccountDto;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -31,7 +31,7 @@ public class AccountController implements AccountsApi {
    * @return User account created (status code 201)
    */
   @Override
-  public ResponseEntity<AccountDto> createUserAccount(CreateAccountDto createAccountDto) {
+  public ResponseEntity<?> createUserAccount(CreateAccountDto createAccountDto) {
     logger.info("Creating account for user with email: {}", createAccountDto.getEmail());
 
     var account =
@@ -42,6 +42,11 @@ public class AccountController implements AccountsApi {
                 .email(createAccountDto.getEmail())
                 .providerType(ProviderType.STRIPE)
                 .build());
+    System.out.println(account);
+    if (account.getProviderId() == null) {
+      String customMessage = "User already exist";
+      return ResponseEntity.ok(customMessage);
+    }
 
     return new ResponseEntity<>(Mapper.toAccountDto(account), HttpStatus.CREATED);
   }

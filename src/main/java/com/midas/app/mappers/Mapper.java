@@ -1,7 +1,7 @@
 package com.midas.app.mappers;
 
 import com.midas.app.models.Account;
-import com.midas.generated.model.AccountDto;
+import com.midas.app.models.AccountDto;
 import lombok.NonNull;
 
 public class Mapper {
@@ -23,7 +23,9 @@ public class Mapper {
         .lastName(account.getLastName())
         .email(account.getEmail())
         .createdAt(account.getCreatedAt())
-        .updatedAt(account.getUpdatedAt());
+        .updatedAt(account.getUpdatedAt())
+        .providerId(account.getProviderId())
+        .providerType(account.getProviderType());
 
     return accountDto;
   }

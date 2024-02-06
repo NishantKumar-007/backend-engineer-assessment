@@ -91,7 +91,7 @@ gradlew test
 ## Implementation Approach
 ![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/c9c121df-bd29-4f73-b41d-dca3608ab13a)
 
-### Major Changes 
+### Major Changes
 - Created Workflow implementation
 - Create Activity implementation
 - Added Provider type and id to user details
