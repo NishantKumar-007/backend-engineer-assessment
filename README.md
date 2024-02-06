@@ -102,6 +102,12 @@ gradlew test
 ### Result
 ![result](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/aba2afb2-5af7-486c-bf2b-6a4cf3975a56)
 
+## Bonus
+I have created another branch with 2 more important changes - [link](https://github.com/NishantKumar-007/backend-engineer-assessment/tree/feature)
+- GET/POST endpoints return providerType and providerId along with other basic details.
+- Can not create more than one user if email already exists
+
+Note - reason for not including above features in main branch -> I didn't want to temper with original auto generated data there.
 
 ## Guides
 
