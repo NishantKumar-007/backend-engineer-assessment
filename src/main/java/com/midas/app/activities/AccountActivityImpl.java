@@ -16,12 +16,16 @@ public class AccountActivityImpl implements AccountActivity {
 
   @Autowired private AccountRepository accountRepository;
 
+
+  // saving updated account to database
   @Override
   public Account saveAccount(Account account) {
 
     return accountRepository.save(account);
   }
 
+
+  // Calling customer stripe api to create customer
   @Override
   public Account createPaymentAccount(Account account) {
 

@@ -34,6 +34,8 @@ public class AccountController implements AccountsApi {
   public ResponseEntity<AccountDto> createUserAccount(CreateAccountDto createAccountDto) {
     logger.info("Creating account for user with email: {}", createAccountDto.getEmail());
 
+
+    // added providerType
     var account =
         accountService.createAccount(
             Account.builder()
