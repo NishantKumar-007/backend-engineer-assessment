@@ -85,6 +85,17 @@ This will invoke the workflow and your temporal UI will start at [http://localho
 ## Implementation Approach
 ![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/c9c121df-bd29-4f73-b41d-dca3608ab13a)
 
+### Major Changes 
+- Created Workflow implementation
+- Create Activity implementation
+- Added Provider type and id to user details
+- Creating customer using Strip API
+- saving updated data to DB
+- unit test for updated user fields
+
+### Result
+![result](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/aba2afb2-5af7-486c-bf2b-6a4cf3975a56)
+
 
 ## Guides
 
