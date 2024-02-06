@@ -96,8 +96,8 @@ gradlew test
 - Create Activity implementation
 - Added Provider type and id to user details
 - Creating customer using Strip API
-- saving updated data to DB
-- unit test for updated user fields
+- Saving updated data to DB
+- Unit test for updated user fields
 
 ### Result
 ![result](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/aba2afb2-5af7-486c-bf2b-6a4cf3975a56)
@@ -107,7 +107,7 @@ I have created another branch with 2 more important changes - [link](https://git
 - GET/POST endpoints return providerType and providerId along with other basic details.
 - Can not create more than one user if email already exists
 
-Note - reason for not including above features in main branch -> I didn't want to temper with original auto generated files(dto , api etc.) there.
+Note - Reason for not including above features in main branch -> I didn't want to temper with original auto generated files(dto , api etc.) there.
 You can run this branch with same steps as main branch if you want.
 
 ## Guides
