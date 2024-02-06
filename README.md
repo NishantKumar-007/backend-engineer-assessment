@@ -63,7 +63,7 @@ You are required to first start the temporal server using the following command
 temporal server start-dev
 ```
 
-and then run the application using the following command or using your IDE.
+and then run the application using the following command at project source or using your IDE.
 
 ```sh
 gradlew bootRun
@@ -81,6 +81,12 @@ body parameters -
 }
 ```
 This will invoke the workflow and your temporal UI will start at [http://localhost:8233](http://localhost:8233/)
+
+### Running Test
+run following command at project root
+```sh
+    gradlew test
+```
 
 ## Implementation Approach
 ![Untitled-2024-02-06-0053](https://github.com/NishantKumar-007/backend-engineer-assessment/assets/61771311/c9c121df-bd29-4f73-b41d-dca3608ab13a)
